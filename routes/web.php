@@ -42,6 +42,10 @@ Route::prefix('marketing')->group(function () {
 
 Route::prefix('khachhang')->group(function () {
     Route::get('/', [KhachHangController::class, 'index'])->name('khachhang.index');
-    
+
+});
+
+Route::prefix('thongke')->group(function () {
+    Route::get('/', [ThongKeController::class, 'index'])->name('thongke.index');
 });
 

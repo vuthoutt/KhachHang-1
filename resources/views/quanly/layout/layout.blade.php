@@ -106,7 +106,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
+                            <a href="{{ route('thongke.index') }}" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
                         </li>
                     </ul>
                 </div>
