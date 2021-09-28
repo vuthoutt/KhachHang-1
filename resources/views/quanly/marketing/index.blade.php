@@ -3,7 +3,18 @@
     <title>Marketing</title>
 @endsection
 @section('content')
-
+@if (count($errors)>0)
+    <div class="alert alert-danger">
+        @foreach ($errors as $err)
+            {{$err}} <br>
+        @endforeach
+    </div>
+@endif
+@if (session('thongbao'))
+<div class="alert alert-success">
+    {{ session('thongbao') }}
+</div>
+@endif
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -31,18 +42,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if (isset($marketing))
+                        <?php $i = 1; ?>
+                        @foreach ($marketing as $item)
                     <tr class="even gradeC" align="center">
-                        <td>1</td>
-                        <td>Chiến lược marketing 1</td>
-                        <td>Nguyễn Khắc Hiếu</td>
-                        <td>Nguyễn Khắc Hiếu</td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $i++ }}</td>
+                        <td>{{ $item->ten}}</td>
+                        <td>{{ $item->nhan_vien->ten }}</td>
+                        <td>{{ $item->nguoi_phu_trach }}</td>
+                        <td>{{ $item->ngay_bat_dau }}</td>
+                        <td>{{ $item->ngay_ket_thuc }}</td>
                         <td class="center">
-                            <a href="#"><i class="fa fa-pencil fa-fw"></i> </a>
-                            <a href="#"><i class="fa fa-trash-o  fa-fw"></i></a>
+                            <a href="{{ Route('marketing.getSua',['id'=>$item->id]) }}"><i class="fa fa-pencil fa-fw"></i> </a>
+                            <a href="{{ Route('marketing.getXoa', ['id'=>$item->id]) }}"><i class="fa fa-trash-o  fa-fw"></i></a>
                         </td>
                     </tr>
+                    @endforeach
+                    @endif
                 </tbody>
             </table>
         </div>

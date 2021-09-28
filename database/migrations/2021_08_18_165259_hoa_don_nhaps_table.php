@@ -16,7 +16,6 @@ class HoaDonNhapsTable extends Migration
         //
         Schema::create('hoa_don_nhap', function (Blueprint $table) {
             $table->id();
-            $table->integer('diem_ban_id');
             $table->integer('nhan_vien_id');
             $table->date('ngay_nhap');
             $table->decimal('tong_tien')->default(0);

@@ -92,7 +92,7 @@
                             <a href="{{Route('marketing.index')}}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Marketing</a>
                         </li>
                         <li>
-                            <a href="#" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Bình luận</a>
+                            <a href="{{ Route('binhluan.index') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Bình luận</a>
                         </li>
                         <li>
                             <a href="#" style="color: red"><i class="fa fa-users fa-fw"></i> Khách hàng<span class="fa arrow"></span></a>
@@ -101,12 +101,20 @@
                                     <a href="{{Route('khachhang.index')}}" style="color: red">Thông tin khách hàng</a>
                                 </li>
                                 <li>
-                                    <a href="#" style="color: red">Phân loại khách hàng</a>
+                                    <a href="#" style="color: red">Phân loại khách hàng<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="{{ route('khachthuong.index') }}" style="color: red">Khách hàng bình thường</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('khachvip.index') }}" style="color: red">Khách hàng VIP</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
+                            <a href="{{ route('thongke.index') }}" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
                         </li>
                     </ul>
                 </div>

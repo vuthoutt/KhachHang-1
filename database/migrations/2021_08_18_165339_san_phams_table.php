@@ -16,16 +16,13 @@ class SanPhamsTable extends Migration
         //
         Schema::create('san_pham', function (Blueprint $table) {
             $table->id();
-            $table->integer('diem_ban_id');
             $table->integer('loai_san_pham_id');
             $table->integer('nha_cung_cap_id');
             $table->string('ten');
             $table->string('ten_khong_dau')->nullable();
             $table->string('hinh_anh')->nullable();
             $table->decimal('gia_nhap')->default(0);
-            $table->decimal('gia_xuat')->default(0);
             $table->bigInteger('so_luong')->default(0);
-            $table->bigInteger('da_ban')->default(0);
             $table->string('don_vi_tinh')->nullable();
             $table->date('nsx')->nullable();
             $table->date('hsd')->nullable();

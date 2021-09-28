@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MarketingTable extends Migration
+class PhieuNhapsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,10 @@ class MarketingTable extends Migration
     public function up()
     {
         //
-        Schema::create('marketing', function (Blueprint $table) {
+        Schema::create('phieu_nhap', function (Blueprint $table) {
             $table->id();
-            $table->integer('nguoi_tao');
-            $table->string('nguoi_phu_trach');
-            $table->text('ten');
-            $table->date('ngay_bat_dau');
-            $table->date('ngay_ket_thuc'); 
+            $table->integer('nhan_vien_id');
+            $table->date('ngay_nhap');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class MarketingTable extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('marketing');
+        Schema::dropIfExists('phieu_nhap');
     }
 }

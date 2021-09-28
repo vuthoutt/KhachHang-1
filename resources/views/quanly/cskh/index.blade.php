@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        <a class="btn btn-primary" href=""> <i class="fa fa-plus"></i>
+                        <a class="btn btn-primary" href="{{ Route('cskh.getThem') }}"> <i class="fa fa-plus"></i>
                             Thêm</a>
                     <p>
                 </div>
@@ -31,18 +31,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if (isset($danhsach))
+                    <?php $i = 1; ?>
+                    @foreach ($danhsach as $ds)
                     <tr class="even gradeC" align="center">
-                        <td>1</td>
-                        <td>Chăm sóc khách hàng</td>
-                        <td>Nguyễn Khắc Hiếu</td>
-                        <td>Nguyễn Khắc Hiếu</td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $i++ }}</td>
+                        <td>{{ $ds->ten }}</td>
+                        <td>{{ $ds->nhan_vien->ten }}</td>
+                        <td>{{ $ds->nguoi_phu_trach }}</td>
+                        <td>{{ $ds->ngay_bat_dau }}</td>
+                        <td>{{ $ds->ngay_ket_thuc }}</td>
                         <td class="center">
-                            <a href="#"><i class="fa fa-pencil fa-fw"></i> </a>
-                            <a href="#"><i class="fa fa-trash-o  fa-fw"></i></a>
+                            <a href="{{ Route('cskh.getSua',['id'=>$ds->id])}}"><i class="fa fa-pencil fa-fw"></i> </a>
+                            <a href="{{ Route('cskh.getXoa',['id'=>$ds->id]) }}"><i class="fa fa-trash-o  fa-fw" onclick="return ConfirmDelete()"></i></a>
                         </td>
                     </tr>
+                    @endforeach
+                    @endif
                 </tbody>
             </table>
         </div>

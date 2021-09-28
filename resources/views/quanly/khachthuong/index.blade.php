@@ -23,17 +23,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if (isset($thongtin))
+                    @if (isset($khachthuong))
                         <?php $i=1; ?>
-                        @foreach ($thongtin as $tt)
+                        @foreach ($khachthuong as $kt)
                     <tr class="even gradeC" align="center">
                         <td>{{ $i++ }}</td>
-                        <td>{{ $tt->ma_kh }}</td>
-                        <td>{{ $tt->ten }}</td>
-                        <td>{{ $tt->sdt }}</td>
-                        <td>{{ $tt->ngay_sinh}}</td>
-                        <td>{{ $tt->dia_chi }}</td>
-                        <td>{{ $tt->tich_diem }}</td>
+                        <td>{{ $kt->ma_kh }}</td>
+                        <td>{{ $kt->ten }}</td>
+                        <td>{{ $kt->sdt }}</td>
+                        <td>{{ $kt->ngay_sinh}}</td>
+                        <td>{{ $kt->dia_chi }}</td>
+                        <td>{{ $kt->tich_diem }}</td>
                     </tr>
                     @endforeach
                     @endif

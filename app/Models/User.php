@@ -49,4 +49,12 @@ class User extends Authenticatable
     public function nhan_vien() {
         return $this->hasOne(NhanVien::class, 'user_id');
     }
+
+    public function khach_hang(){
+        return $this -> hasOne(KhachHang::class, 'user_id');
+    }
+
+    public function binh_luan(){
+        return $this -> hasMany(BinhLuan::class,  'user_id');
+    }
 }

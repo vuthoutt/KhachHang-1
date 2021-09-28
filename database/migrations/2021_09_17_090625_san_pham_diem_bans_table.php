@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChiTietHoaDonXuatsTable extends Migration
+class SanPhamDiemBansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,14 @@ class ChiTietHoaDonXuatsTable extends Migration
     public function up()
     {
         //
-        Schema::create('ct_hoa_don_xuat', function (Blueprint $table) {
+        Schema::create('san_pham_diem_ban', function (Blueprint $table) {
             $table->id();
-            $table->integer('hoa_don_xuat_id');
-            $table->integer('san_pham_diem_ban_id')->nullable();
+            $table->integer('diem_ban_id');
+            $table->integer('san_pham_id');
+            $table->decimal('gia_ban')->default(0);
             $table->bigInteger('so_luong')->default(0);
-            $table->decimal('gia')->default(0);
-            $table->decimal('khuyen_mai')->nullable()->default(0);
-            $table->decimal('thanh_tien')->default(0);
+            $table->bigInteger('da_ban')->default(0);
+            $table->string('trang_thai')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class ChiTietHoaDonXuatsTable extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('ct_hoa_don_xuat');
+        Schema::dropIfExists('san_pham_diem_ban');
     }
 }

@@ -45,4 +45,12 @@ class NhanVien extends Model
     public function ngay_cong() {
         return $this->hasMany(NgayCong::class, 'nhan_vien_id');
     }
+
+    public function cskh(){
+        return $this -> hasMany(CSKH::class, 'nguoi_tao');
+    }
+
+    public function marketing(){
+        return $this -> hasMany(Marketing::class, 'nguoi_tao');
+    }
 }

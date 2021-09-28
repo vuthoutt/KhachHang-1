@@ -16,8 +16,6 @@ class NhanViensTable extends Migration
         Schema::create('nhan_vien', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->integer('phong_ban_id')->nullable()->default(0);
-            $table->integer('chuc_vu_id')->nullable()->default(0);
             $table->integer('diem_ban_id')->nullable();
             $table->string('ma_nv')->nullable();
             $table->string('ten');

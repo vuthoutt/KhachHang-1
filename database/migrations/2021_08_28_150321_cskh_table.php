@@ -17,10 +17,10 @@ class CskhTable extends Migration
         Schema::create('cskh', function (Blueprint $table) {
             $table->id();
             $table->integer('nguoi_tao');
-            $table->integer('nguoi_phu_trach');
+            $table->string('nguoi_phu_trach');
             $table->text('ten');
             $table->date('ngay_bat_dau');
-            $table->date('ngay_ket_thuc');   
+            $table->date('ngay_ket_thuc');
             $table->timestamps();
         });
     }
