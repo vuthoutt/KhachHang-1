@@ -115,6 +115,13 @@
                         </li>
                         <li>
                             <a href="{{ route('thongke.index') }}" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="{{ route('thongke.index') }}" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i>Khách Hàng</a>
+                                        <a href="{{ route('thongke.khachhang') }}" style="color: red"><i class="fa fa-bar-chart-o fa-fw"></i>Phân Loại Khách Hàng</a>
+                                    </li>
+                                </ul>
+
                         </li>
                     </ul>
                 </div>

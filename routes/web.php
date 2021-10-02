@@ -44,7 +44,7 @@ Route::prefix('khachhang')->group(function () {
     Route::get('/', [KhachHangController::class, 'index'])->name('khachhang.index');
     Route::get('thuong', [KhachHangController::class, 'khachthuong'])->name('khachthuong.index');
     Route::get('vip', [KhachHangController::class, 'khachvip'])->name('khachvip.index');
-    
+
 });
 
 Route::prefix('binhluan')->group(function () {
@@ -52,14 +52,15 @@ Route::prefix('binhluan')->group(function () {
     Route::get('sua', [BinhLuanController::class, 'getSua'])->name('binhluan.getSua');
     Route::post('sua', [BinhLuanController::class, 'postSua'])->name('binhluan.postSua');
     Route::get('xoa', [BinhLuanController::class, 'getXoa'])->name('bnhluan.getXoa');
-    
+
 });
 
 Route::prefix('thekhachhang')->group(function () {
     Route::get('/', [TheKhachHangController::class, 'index'])->name('thekhachang.index');
-    
+    Route::get('voucher', [TheKhachHangController::class, 'voucher'])->name('thekhachang.voucher');
 });
 
 Route::prefix('thongke')->group(function () {
     Route::get('/', [ThongKeController::class, 'index'])->name('thongke.index');
+    Route::get('khachhang', [ThongKeController::class, 'khachhang'])->name('thongke.khachhang');
 });
