@@ -36,7 +36,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: rgb(197, 12, 12)">
             <div class="navbar-header">
-                
+
                 <a class="navbar-brand" style="color: white" href="index.html">Trang cá nhân</a>
             </div>
             <!-- /.navbar-header -->
@@ -49,14 +49,14 @@
                             <img src="image/avata.jpg" width="150px" height="150px" alt=""> <br>
                             <b style="font-size: 20px">Nguyễn Khắc Hiếu</b>
                         </li>
-                        
+
                         </div>
-                       
+
                         <li>
                             <a href="" style="color: red"><i class="fa fa-dashboard fa-fw" ></i> Thông tin cá nhân</a>
                         </li>
                         <li>
-                            <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Voucher</a>
+                            <a href="{{ route('thekhachang.voucher') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Voucher</a>
                         </li>
                         <li>
                             <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Lịch sử mua hàng</a>

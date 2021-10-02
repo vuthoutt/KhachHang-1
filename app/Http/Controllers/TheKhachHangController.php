@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Marketing;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\KhachHang;
@@ -11,6 +13,7 @@ class TheKhachHangController extends Controller
     public function index(){
         return view('nguoidung.index');
     }
+<<<<<<< HEAD
     public function taikhoan(){
         return view('nguoidung.taikhoan');
     }
@@ -59,5 +62,11 @@ class TheKhachHangController extends Controller
     }
     public function postDangnhap(){
 
+=======
+    public function voucher(){
+        $date = Carbon::now()->toDateString();
+        $vouchers = Marketing::whereDate('ngay_ket_thuc','>=',$date)->get();
+        return view('nguoidung.voucher.index',compact('vouchers'));
+>>>>>>> 323db7c3a552ca5aee48eb845cfa6cc8944a50b9
     }
 }
