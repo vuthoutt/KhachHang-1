@@ -30,8 +30,6 @@ class NhanVienSeeder extends Seeder
         ]);
         DB::table('nhan_vien')->insert([
             'user_id' => 2,
-            'phong_ban_id' => 4,
-            'chuc_vu_id' => 5,
             'diem_ban_id' => 1,
             'ma_nv' => 'QL2',
             'ten' => 'Quản Lý Bán Hàng',
@@ -46,8 +44,7 @@ class NhanVienSeeder extends Seeder
         ]);
         DB::table('nhan_vien')->insert([
             'user_id' => 3,
-            'phong_ban_id' => 1,
-            'chuc_vu_id' => 4,
+            
             'ma_nv' => 'QL3',
             'ten' => 'Trưởng Phòng Tài Chính',
             'gioi_tinh' => 0,
@@ -61,9 +58,8 @@ class NhanVienSeeder extends Seeder
         ]);
         DB::table('nhan_vien')->insert([
             'user_id' => 4,
-            'phong_ban_id' => 3,
             'diem_ban_id' => 1,
-            'chuc_vu_id' => 5,
+            
             'ma_nv' => 'QL4',
             'ten' => 'Quản Lý Kho',
             'gioi_tinh' => 1,
@@ -75,26 +71,9 @@ class NhanVienSeeder extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
+       
         DB::table('nhan_vien')->insert([
             'user_id' => 5,
-            'phong_ban_id' => 5,
-            'diem_ban_id' => 1,
-            'chuc_vu_id' => 5,
-            'ma_nv' => 'QL5',
-            'ten' => 'Quản Lý Mua Hàng',
-            'gioi_tinh' => 0,
-            'ngay_sinh' => \Carbon\Carbon::now(),
-            'dia_chi' => 'Nam Định',
-            'sdt' => '0123452432',
-            'cccd' => '03434524235632',
-            'trang_thai' => 'Đang làm việc',
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('nhan_vien')->insert([
-            'user_id' => 6,
-            'phong_ban_id' => 6,
-            'chuc_vu_id' => 5,
             'ma_nv' => 'QL6',
             'ten' => 'Quản Lý Quan Hệ Khách Hàng',
             'gioi_tinh' => 1,

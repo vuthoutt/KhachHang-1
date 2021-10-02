@@ -59,6 +59,9 @@
                             <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Voucher</a>
                         </li>
                         <li>
+                            <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Lịch sử mua hàng</a>
+                        </li>
+                        <li>
                             <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Bình luận</a>
                         </li>
                         <li>

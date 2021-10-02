@@ -33,14 +33,32 @@
                         <h3 class="panel-title">Đăng nhập</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="" method="POST">
+                        <form role="form" action="{{ route('quanly.postDangnhap') }}" method="POST">
+                            @csrf
+                            @if (count($errors)>0)
+                                <div class="alert alert-danger">
+                                    @foreach ($errors as $err)
+                                        {{$err}}
+                                    @endforeach
+                                </div>
+                            @endif
 
+                            @if (session('thongbao'))
+                                <div class="alert alert-danger">
+                                    {{session('thongbao')}}
+                                </div>
+                            @endif
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="email" id="email" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="password" id="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="">Ghi nhớ đăng nhập lần sau
+                                    </label>
                                 </div>
                                 <button type="submit" class="btn btn-lg btn-success btn-block">Đăng nhập</button>
                             </fieldset>

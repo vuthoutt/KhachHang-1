@@ -11,4 +11,8 @@ class BinhLuanController extends Controller
         $binhluan = BinhLuan::orderby('id','asc')->get();
         return view('quanly.binhluan.index', compact('binhluan'));
     }
+
+    public function getSua(){
+        return view('quanly.binhluan.edit');
+    }
 }

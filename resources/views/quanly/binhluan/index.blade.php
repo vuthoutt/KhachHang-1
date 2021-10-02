@@ -28,14 +28,12 @@
                     <tr class="even gradeC" align="center">
                         <td>{{ $i++ }}</td>
                         <td>{{ $bl->user_id }}</td>
-                        <td>{{ $bl->noi_dung }} <br>
-                            <textarea class="form-control" rows="3"></textarea> <br>
-                            <button type="submit" class="btn btn-default">Trả lời</button>
+                        <td>{{ $bl->noi_dung }} 
                         </td>
                         <td>{{ $bl->created_at }}</td>
                         <td>{{ $bl->sanpham_id }}</td>
                         <td class="center">
-                            <a href="#"><i class="fa fa-pencil fa-fw"></i> </a>
+                            <a href="{{ Route('binhluan.getSua') }}"><i class="fa fa-reply fa-fw"></i> </a>
                             <a href="#"><i class="fa fa-trash-o  fa-fw"></i></a>
                         </td>
                     </tr>

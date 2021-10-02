@@ -51,5 +51,11 @@ class ChucVuSeeder extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
+        DB::table('chuc_vu')->insert([
+            'ma_chuc_vu'=> 'KH',
+            'ten' => 'Khách hàng',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
     }
 }
