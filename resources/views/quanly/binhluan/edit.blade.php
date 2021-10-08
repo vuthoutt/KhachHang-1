@@ -10,7 +10,7 @@
     @foreach ($errors->all() as $err)
         {{ $err }}<br>
     @endforeach
-    </div>  
+    </div>
     @endif
     @if (session('thongbao'))
         <div class="alert alert-success">
@@ -32,15 +32,19 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Trả lời</h1>
+                <h1 class="page-header">Phản hồi của khách hàng</h1>
             </div>
             <!-- /.col-lg-12 -->
             <div class="col-lg-7" style="padding-bottom:120px">
-                <form action="" method="POST">
+                <form action="{{ route('binhluan.postSua', ['id' => $comments->id]) }}" method="POST">
                     @csrf
-                    
+
                     <div class="form-group">
-                        <textarea class="form-control" rows="3"></textarea> <br>
+                        <textarea class="form-control" disabled rows="3">{{ $comments->noi_dung }}</textarea> <br>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control"  name="noi_dung" rows="3"></textarea> <br>
                     </div>
                     <button type="submit" class="btn btn-default">Trả lời</button>
                     <button type="reset" class="btn btn-default">Nhập lại</button>

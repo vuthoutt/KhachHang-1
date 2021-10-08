@@ -37,8 +37,8 @@
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: rgb(197, 12, 12)">
             <div class="navbar-header">
 
-                <a class="navbar-brand" style="color: white" href="">{{ Auth::user()->khach_hang->ten }}</a>
-                
+                <a class="navbar-brand" style="color: white" href="">{{ Auth::user()->khach_hang->ten ?? ''}}</a>
+
             </div>
             <!-- /.navbar-header -->
 
@@ -51,7 +51,7 @@
                         </li>
 
                         </div>
-                        
+
                         <li>
                             <a href="{{ route('thekhachhang.index') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
                         </li>
