@@ -26,12 +26,21 @@ class LoginController extends Controller
         ]);
 
         $remember = $request->has('remember') ?true : false;
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $remember)) {
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password], $remember)) {
             return redirect()->route('quanly.index');
         }
         else{
             return redirect()->back()->with('thongbao', 'Đăng nhập thất bại');
         }
 
+    }
+
+    public function taikhoan(){
+        return view('quanly.taikhoan');
+    }
+
+    public function dangxuat(){
+        Auth::logout();
+        return redirect()->route('quanly.dangnhap');
     }
 }

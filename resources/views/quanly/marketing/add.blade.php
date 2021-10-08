@@ -57,6 +57,10 @@
                         <label>Ngày kết thúc</label>
                         <input type="date" class="form-control" name="ngayketthuc" placeholder="" />
                     </div>
+                    <div class="form-group">
+                        <label>Trạng thái</label>
+                        <input class="form-control" name="trang_thai" placeholder="Trạng thái" />
+                    </div>
                     <button type="submit" class="btn btn-default">Thêm</button>
                     <button type="reset" class="btn btn-default">Nhập lại</button>
                 <form>

@@ -21,6 +21,7 @@ class MarketingTable extends Migration
             $table->text('ten');
             $table->date('ngay_bat_dau');
             $table->date('ngay_ket_thuc'); 
+            $table->string('trang_thai');
             $table->timestamps();
         });
     }

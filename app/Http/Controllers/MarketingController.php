@@ -31,6 +31,7 @@ class MarketingController extends Controller
         $marketing->ten = $request->noidung;
         $marketing->ngay_bat_dau = $request->ngaybatdau;
         $marketing->ngay_ket_thuc = $request->ngayketthuc;
+        $marketing->trang_thai = $request->trang_thai;
         $marketing->save();
         
         return redirect()->back()->with('thongbao', 'Thêm thành công');

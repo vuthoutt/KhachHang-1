@@ -20,7 +20,6 @@ class BinhLuansTable extends Migration
             $table->integer('san_pham_id');
             $table->integer('nguon_binh_luan');
             $table->text('noi_dung');
-            $table->date('ngay_gui');   
             $table->timestamps();
         });
     }

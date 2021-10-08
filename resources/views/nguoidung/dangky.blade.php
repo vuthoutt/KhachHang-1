@@ -64,9 +64,12 @@
 </div>
 @endif
 @if (session('thongbao'))
-<div class="alert alert-danger">
+<div class="alert alert-success">
         {{session('thongbao')}}
 </div>
+@endif
+@if (session('thongbao2'))
+<div class="alert alert-danger">{{session('thongbao2')}}</div>
 @endif
 <div class="main-content">
     <div class="row">
@@ -75,7 +78,7 @@
             <h2 class="ml-3">Đăng nhập</h2>
             <div class="panel panel-default" style="width: 300px">
                 <div class="panel-body">
-                    <form action="" method="POST" id="dang-nhap">
+                    <form action="{{Route('thekhachhang.postDangnhap')}}" method="POST" id="dang-nhap">
                         @csrf
                         <div class="form-group">
                             <label for="email">Tài khoản</label>
@@ -101,7 +104,7 @@
             <h2 class="ml-3">Đăng Kí</h2>
             <div class="panel panel-default" style="width: 600px">
                 <div class="panel-body">
-                    <form action="" method="POST" id="dang-ky">
+                    <form action="{{Route('thekhachhang.postDangky')}}" method="POST" id="dang-ky">
                         @csrf
       
                         <div class="form-group">

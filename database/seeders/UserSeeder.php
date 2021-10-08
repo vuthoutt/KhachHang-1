@@ -22,62 +22,62 @@ class UserSeeder extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
-        DB::table('users')->insert([
-            'email' => 'banhang_1@gmail.com',
-            'password' => md5('12345678'),
-            'phong_ban_id' => 4,
-            'chuc_vu_id' => 5,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('users')->insert([
-            'email' => 'taichinh_1@gmail.com',
-            'password' => md5('12345678'),
-            'phong_ban_id' => 1,
-            'chuc_vu_id' => 4,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('users')->insert([
-            'email' => 'kho_1@gmail.com',
-            'password' => md5('12345678'),
-            'phong_ban_id' => 3,
-            'chuc_vu_id' => 5,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('users')->insert([
-            'email' => 'qhkh_1@gmail.com',
-            'password' => md5('12345678'),
-            'phong_ban_id' => 5,
-            'chuc_vu_id' => 5,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('users')->insert([
-            'email' => 'khachhang_1@gmail.com',
-            'password' => md5('12345678'),
-            'phong_ban_id' => 0,
-            'chuc_vu_id' => 0,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('users')->insert([
-            'email' => 'khachhang_2@gmail.com',
-            'password' => md5('12345679'),
-            'phong_ban_id' => 0,
-            'chuc_vu_id' => 0,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
-        DB::table('users')->insert([
-            'email' => 'khachhang_3@gmail.com',
-            'password' => md5('12345668'),
-            'phong_ban_id' => 0,
-            'chuc_vu_id' => 0,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-        ]);
+        // DB::table('users')->insert([
+        //     'email' => 'banhang_1@gmail.com',
+        //     'password' => md5('12345678'),
+        //     'phong_ban_id' => 4,
+        //     'chuc_vu_id' => 5,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+        // DB::table('users')->insert([
+        //     'email' => 'taichinh_1@gmail.com',
+        //     'password' => md5('12345678'),
+        //     'phong_ban_id' => 1,
+        //     'chuc_vu_id' => 4,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+        // DB::table('users')->insert([
+        //     'email' => 'kho_1@gmail.com',
+        //     'password' => md5('12345678'),
+        //     'phong_ban_id' => 3,
+        //     'chuc_vu_id' => 5,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+        // DB::table('users')->insert([
+        //     'email' => 'qhkh_1@gmail.com',
+        //     'password' => md5('12345678'),
+        //     'phong_ban_id' => 5,
+        //     'chuc_vu_id' => 5,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+        // DB::table('users')->insert([
+        //     'email' => 'khachhang_1@gmail.com',
+        //     'password' => md5('12345678'),
+        //     'phong_ban_id' => 0,
+        //     'chuc_vu_id' => 0,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+        // DB::table('users')->insert([
+        //     'email' => 'khachhang_2@gmail.com',
+        //     'password' => md5('12345679'),
+        //     'phong_ban_id' => 0,
+        //     'chuc_vu_id' => 0,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+        // DB::table('users')->insert([
+        //     'email' => 'khachhang_3@gmail.com',
+        //     'password' => md5('12345668'),
+        //     'phong_ban_id' => 0,
+        //     'chuc_vu_id' => 0,
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
         
         
     }

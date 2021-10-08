@@ -16,10 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LoginController::class ,'login'])->name('quanly.dangnhap');
 Route::post('/', [LoginController::Class, 'postLogin'])->name('quanly.postDangnhap');
 
-Route::prefix('admin')->middleware('quanly.login')->group(function(){
+//Route::prefix('admin')->middleware('quanly.login')->group(function(){
 
 Route::get('index', [PageController::class, 'index'])->name('quanly.index');
-    Route::prefix('cskh')->group(function () {
+Route::get('dangxuat', [LoginController::class, 'dangxuat'])->name('quanly.dangxuat');
+Route::get('taikhoan', [LoginController::class, 'taikhoan'])->name('quanly.taikhoan');
+Route::post('taikhoan', [LoginController::class, 'postTaikhoan'])->name('quanly.postTaikhoan');
+Route::prefix('cskh')->group(function () {
     Route::get('/', [CSKHController::class, 'index'])->name('cskh.index');
 
     Route::get('them', [CSKHController::class, 'getThem'])->name('cskh.getThem');
@@ -60,27 +63,30 @@ Route::prefix('binhluan')->group(function () {
 
 Route::prefix('thongke')->group(function () {
     Route::get('/', [ThongKeController::class, 'index'])->name('thongke.index');
+    Route::get('khachhang', [ThongKeController::class, 'khachhang'])->name('thongke.khachhang');
 });
-});
+//});
 
+
+//Khách hàng
 Route::get('dangky', [TheKhachHangController::class, 'dangky'])->name('thakhachhang.dangky');
 Route::post('dangky', [TheKhachHangController::class, 'postDangky'])->name('thekhachhang.postDangky');
 Route::get('dangnhap', [TheKhachHangController::class, 'dangnhap'])->name('thekhachhang.dangnhap');
 Route::post('dangnhap', [TheKhachHangController::class, 'postDangnhap'])->name('thekhachhang.postDangnhap');
 
 Route::prefix('thekhachhang')->group(function () {
-    Route::get('/', [TheKhachHangController::class, 'index'])->name('thekhachang.index');
-<<<<<<< HEAD
+    Route::get('/', [TheKhachHangController::class, 'index'])->name('thekhachhang.index');
+    Route::get('voucher', [TheKhachHangController::class, 'voucher'])->name('thekhachang.voucher');
+    Route::get('phanhoi', [TheKhachHangController::class, 'phanhoi'])->name('thekhachhang.phanhoi');
+    Route::post('phanhoi', [TheKhachHangController::class, 'postPhanhoi'])->name('thekhachhang.postPhanhoi');
     Route::get('taikhoan', [TheKhachHangController::class, 'taikhoan'])->name('thekhachhang.taikhoan');
+    Route::post('taikhoan', [TheKhachHangController::class, 'postTaikhoan'])->name('thekhachhang.postTaikhoan');
+    Route::get('doimatkhau', [TheKhachHangController::class, 'matkhau'])->name('thekhachhang.matkhau');
+    Route::post('doimatkhau', [TheKhachHangController::class, 'postMatkhau'])->name('thekhachhang.postMatkhau');
+    Route::get('dangxuat', [TheKhachHangController::class, 'dangxuat'])->name('thekhachhang.dangxuat');
+
     
 });
 
-=======
-    Route::get('voucher', [TheKhachHangController::class, 'voucher'])->name('thekhachang.voucher');
-});
+    
 
-Route::prefix('thongke')->group(function () {
-    Route::get('/', [ThongKeController::class, 'index'])->name('thongke.index');
-    Route::get('khachhang', [ThongKeController::class, 'khachhang'])->name('thongke.khachhang');
-});
->>>>>>> 323db7c3a552ca5aee48eb845cfa6cc8944a50b9

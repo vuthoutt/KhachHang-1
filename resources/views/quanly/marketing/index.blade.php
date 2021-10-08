@@ -53,7 +53,7 @@
                         <td>{{ $item->nguoi_phu_trach }}</td>
                         <td>{{ $item->ngay_bat_dau }}</td>
                         <td>{{ $item->ngay_ket_thuc }}</td>
-                        <td>Trạng thái</td>
+                        <td>{{ $item->trang_thai }}</td>
                         <td class="center">
                             <a href="{{ Route('marketing.getSua',['id'=>$item->id]) }}"><i class="fa fa-pencil fa-fw"></i> </a>
                             <a href="{{ Route('marketing.getXoa', ['id'=>$item->id]) }}"><i class="fa fa-trash-o  fa-fw"></i></a>

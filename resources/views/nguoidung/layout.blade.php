@@ -37,7 +37,8 @@
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: rgb(197, 12, 12)">
             <div class="navbar-header">
 
-                <a class="navbar-brand" style="color: white" href="index.html">Trang cá nhân</a>
+                <a class="navbar-brand" style="color: white" href="">{{ Auth::user()->khach_hang->ten }}</a>
+                
             </div>
             <!-- /.navbar-header -->
 
@@ -46,26 +47,28 @@
                     <ul class="nav" id="side-menu">
                         <div>
                         <li class="sideba-image">
-                            <img src="image/avata.jpg" width="150px" height="150px" alt=""> <br>
-                            <b style="font-size: 20px">Nguyễn Khắc Hiếu</b>
+                            <img src="../image/vinmart.jpg" width="250px" height="150px" alt=""> <br>
                         </li>
 
                         </div>
-
+                        
                         <li>
-                            <a href="" style="color: red"><i class="fa fa-dashboard fa-fw" ></i> Thông tin cá nhân</a>
+                            <a href="{{ route('thekhachhang.index') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('thekhachhang.taikhoan') }}" style="color: red"><i class="fa fa-dashboard fa-fw" ></i> Thông tin cá nhân</a>
                         </li>
                         <li>
                             <a href="{{ route('thekhachang.voucher') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Voucher</a>
                         </li>
                         <li>
-                            <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Lịch sử mua hàng</a>
+                            <a href="{{ route('thekhachhang.phanhoi') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Phản hồi</a>
                         </li>
                         <li>
-                            <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Bình luận</a>
+                            <a href="{{ route('thekhachhang.matkhau') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i> Đổi mật khẩu</a>
                         </li>
                         <li>
-                            <a href="" style="color: red"><i class="fa fa-dashboard fa-fw"></i>Đăng xuất</a>
+                            <a href="{{ route('thekhachhang.dangxuat') }}" style="color: red"><i class="fa fa-dashboard fa-fw"></i>Đăng xuất</a>
                         </li>
                     </ul>
                 </div>

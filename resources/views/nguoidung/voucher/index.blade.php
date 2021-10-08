@@ -20,11 +20,11 @@
     <!-- /.row -->
     <div class="row">
         @foreach ($vouchers as $voucher)
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-yellow">
+        <div class="col-lg-3 col-md-6" style="width:100%">
+            <div class="panel panel-red">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-3">
+                        <div class="col-xs-3" style="width:0%">
                             <i class="fa fa-paste fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">

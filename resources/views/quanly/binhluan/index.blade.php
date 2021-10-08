@@ -14,10 +14,9 @@
                 <thead>
                     <tr align="center">
                         <th>STT</th>
-                        <th>Tên người gửi</th>
-                        <th>Bình luận</th>
+                        <th>Người gửi</th>
+                        <th>Nội dung</th>
                         <th>Ngày gửi</th>
-                        <th>Sản phẩm</th>
                         <th>Chức năng</th>
                     </tr>
                 </thead>
@@ -27,11 +26,10 @@
                     @foreach ($binhluan as $bl)
                     <tr class="even gradeC" align="center">
                         <td>{{ $i++ }}</td>
-                        <td>{{ $bl->user_id }}</td>
+                        <td>{{ $bl->user->email }}</td>
                         <td>{{ $bl->noi_dung }} 
                         </td>
                         <td>{{ $bl->created_at }}</td>
-                        <td>{{ $bl->sanpham_id }}</td>
                         <td class="center">
                             <a href="{{ Route('binhluan.getSua') }}"><i class="fa fa-reply fa-fw"></i> </a>
                             <a href="#"><i class="fa fa-trash-o  fa-fw"></i></a>
