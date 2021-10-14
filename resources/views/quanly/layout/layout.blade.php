@@ -50,7 +50,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white">
-                        Xin chào {{ Auth::user()->khach_hang->ten }}  <i class="fa fa-caret-down"></i>
+                        Xin chào {{ Auth::user()->khach_hang->ten ?? ''}}  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="{{ route('quanly.taikhoan') }}"><i class="fa fa-user fa-fw"></i> Thông tin tài khoản</a>

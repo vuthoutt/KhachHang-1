@@ -27,11 +27,11 @@
                     <tr class="even gradeC" align="center">
                         <td>{{ $i++ }}</td>
                         <td>{{ $bl->user->email }}</td>
-                        <td>{{ $bl->noi_dung }} 
+                        <td>{{ $bl->noi_dung }}
                         </td>
                         <td>{{ $bl->created_at }}</td>
                         <td class="center">
-                            <a href="{{ Route('binhluan.getSua') }}"><i class="fa fa-reply fa-fw"></i> </a>
+                            <a href="{{ Route('binhluan.getSua',['id' => $bl->id]) }} "><i class="fa fa-reply fa-fw"></i> </a>
                             <a href="#"><i class="fa fa-trash-o  fa-fw"></i></a>
                         </td>
                     </tr>

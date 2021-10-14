@@ -55,8 +55,8 @@ Route::prefix('khachhang')->group(function () {
 
 Route::prefix('binhluan')->group(function () {
     Route::get('/', [BinhLuanController::class, 'index'])->name('binhluan.index');
-    Route::get('sua', [BinhLuanController::class, 'getSua'])->name('binhluan.getSua');
-    Route::post('sua', [BinhLuanController::class, 'postSua'])->name('binhluan.postSua');
+    Route::get('sua/{id}', [BinhLuanController::class, 'getSua'])->name('binhluan.getSua');
+    Route::post('sua/{id}', [BinhLuanController::class, 'postSua'])->name('binhluan.postSua');
     Route::get('xoa', [BinhLuanController::class, 'getXoa'])->name('bnhluan.getXoa');
 
 });
@@ -85,8 +85,8 @@ Route::prefix('thekhachhang')->group(function () {
     Route::post('doimatkhau', [TheKhachHangController::class, 'postMatkhau'])->name('thekhachhang.postMatkhau');
     Route::get('dangxuat', [TheKhachHangController::class, 'dangxuat'])->name('thekhachhang.dangxuat');
 
-    
+
 });
 
-    
+
 

@@ -63,7 +63,7 @@ class TheKhachHangController extends Controller
     public function postDangnhap(Request $req){
         $this->validate($req,[
           'email'=>'required',
-          'password'=>'required',  
+          'password'=>'required',
         ],[
             'email.required'=>'Bạn chưa nhập tài khoản',
             'password.required'=>'Bạn chưa nhập mật khẩu',
@@ -131,13 +131,17 @@ class TheKhachHangController extends Controller
     }
 
     public function phanhoi(){
-        $phanhoi = BinhLuan::where('user_id','=', Auth::user()->id)->get();
+        $phanhoi = BinhLuan::where('nguon_binh_luan','=', Auth::user()->id)->get();
         return view('nguoidung.phanhoi.index', compact('phanhoi'));
     }
     public function postPhanhoi(Request $request){
         $binhluan = new BinhLuan;
         $binhluan ->user_id = Auth::user()->id;
         $binhluan->noi_dung = $request->noi_dung;
+        $binhluan->san_pham_id = 1;
+        $binhluan->status = 0;
+        $binhluan ->nguon_binh_luan = Auth::user()->id;
+        $binhluan->ngay_gui = Carbon::now();
         $binhluan->save();
 
         return redirect()->back()->with('thongbao', 'Gửi phản hồi thành công');
