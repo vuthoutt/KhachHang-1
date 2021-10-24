@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [LoginController::class ,'login'])->name('quanly.dangnhap');
-Route::post('/', [LoginController::Class, 'postLogin'])->name('quanly.postDangnhap');
+Route::post('/', [LoginController::class, 'postLogin'])->name('quanly.postDangnhap');
 
 //Route::prefix('admin')->middleware('quanly.login')->group(function(){
 
