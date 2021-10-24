@@ -13,12 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', [LoginController::class ,'login'])->name('quanly.dangnhap');
 Route::post('/', [LoginController::class, 'postLogin'])->name('quanly.postDangnhap');
 
 //Route::prefix('admin')->middleware('quanly.login')->group(function(){
 
+Route::group(['middleware' => 'checkAdminLogin'], function() {
 Route::get('index', [PageController::class, 'index'])->name('quanly.index');
+Route::get('/cham-cong', [NgayCongController::class, 'add'])->name('ngaycong.add');
 Route::get('dangxuat', [LoginController::class, 'dangxuat'])->name('quanly.dangxuat');
 Route::get('taikhoan', [LoginController::class, 'taikhoan'])->name('quanly.taikhoan');
 Route::post('taikhoan', [LoginController::class, 'postTaikhoan'])->name('quanly.postTaikhoan');
@@ -66,6 +69,8 @@ Route::prefix('thongke')->group(function () {
     Route::get('khachhang', [ThongKeController::class, 'khachhang'])->name('thongke.khachhang');
 });
 //});
+});
+
 
 
 //Khách hàng

@@ -1,6 +1,6 @@
 @extends('quanly.layout.layout')
 @section('head')
-<title>Admin</title>    
+<title>Admin</title>
 @endsection
 @section('content')
     <div class="row">
@@ -10,7 +10,9 @@
                     <div class="col-lg-10">
                         Trang chủ
                     </div>
-
+                    <div class="col-lg-2" style="">
+                        <a class="btn btn-success btn-lg" id="btnDiemDanh" data-url={{route('ngaycong.add')}} {{$isChamCong ? 'disabled' : ''}} > <i class="fa fa-edit"></i> Chấm công</a>
+                    </div>
                 </div>
 
             </h1>
@@ -159,5 +161,45 @@
         </div>
 
     </div>
+
+@endsection
+@section('js')
+
+    <script>
+        $("#btnDiemDanh").click(function(e){
+            e.preventDefault()
+            var type = "GET"
+            var url = $(this).attr('data-url')
+            $.ajax({
+                type: type,
+                url: url,
+                success: function (response) {
+                    const {success} = response
+                    if (success) {
+                        Swal.fire({
+                            title: "Điểm danh thành công!",
+                            icon: "success",
+                            showConfirmButton: true,
+                        })
+                    } else {
+                        Swal.fire({
+                            title: "Bạn đã điểm danh rồi!",
+                            icon: "error",
+                            showConfirmButton: true,
+                        })
+                    }
+
+                    $("#btnDiemDanh").attr('disabled', true)
+                },
+                error: function (response) {
+                    Swal.fire({
+                        title: "Lỗi!",
+                        icon: "error",
+                        showConfirmButton: true,
+                    })
+                }
+            })
+        })
+    </script>
 
 @endsection
