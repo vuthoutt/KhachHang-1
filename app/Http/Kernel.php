@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'checkAuth' => \App\Http\Middleware\AuthMiddleware::class,
         'quanly.login' => \App\Http\Middleware\AdminLoginMiddleware::class,
         'user.login' => \App\Http\Middleware\UserLoginMiddleware::class,
+        'checkAdminLogin' => \App\Http\Middleware\checkAdminLogin::class,
     ];
 }
